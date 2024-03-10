@@ -32,9 +32,7 @@ function Cart() {
             </div>
             <div className="col-md-4">
               <h3>{cartItem.title}</h3>
-              <p className="lead fw-bold">
-                ${cartItem.price}
-              </p>
+              <p className="lead fw-bold">${cartItem.price}</p>
               <p className=" fw-bold">Quantity : {cartItem.quantity}</p>
               <Counter cartItem={cartItem} />
             </div>
@@ -57,11 +55,11 @@ function Cart() {
   const button = () => {
     return (
       <div className="container d-flex justify-content-center">
-        <div className="row">
+        {/*<div className="row">
           <Link to="/checkout" className="btn btn-outline-primary mb-5">
             Proceed To checkout
           </Link>
-        </div>
+    </div>*/}
         <div className="row ms-5">
           <Button className="btn mb-5" onClick={() => dispatch(clearCart())}>
             Clear Cart
